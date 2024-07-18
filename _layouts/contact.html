@@ -3,14 +3,111 @@ title: Contact
 layout: default
 bodyClass: "page-contact"
 ---
+<style>
+    .team-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .team-member {
+        text-align: center;
+        width: 200px;
+    }
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .team-member p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .faculty-member {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .faculty-member img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .faculty-member p {
+        margin-top: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contact-content {
+        margin-top: 40px;
+        text-align: center;
+    }
+    .title_contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
 <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
     <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-8 mx-auto">
             <div class="service service-single">
-                <h1 class="title">{{page.title}}</h1>
-                {% include call.html show_button=false %}
-                <div class="content mt-4">{{content}}</div>
+            <div class="title_contact">
+                <h1 class="title">{{ page.title }}</h1>
+            </div>
+                <div class="content mt-4">
+                    <!-- Faculty Coordinator -->
+                    <div class="faculty-member">
+                        <div>
+                            <img src="{{ page.abhishek | relative_url }}" alt="Abhishek" class="img-fluid">
+                            <p>Abhishek<br>Faculty Coordinator<br><a href="mailto:abhishek@iisermohali.ac.in">abhishek@iisermohali.ac.in</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Team Members -->
+                    <div class="team-section">
+                        <div class="team-member">
+                            <img src="{{ page.swayam | relative_url }}" alt="Swayam" class="img-fluid">
+                            <p>Swayam Swarup Biswal<br>Student Coordinator (Designer)<br><a href="mailto:ms23021@iisermohali.ac.in">ms23021@iisermohali.ac.in</a></p>
+                        </div>
+                        <div class="team-member">
+                            <img src="{{ page.souradeep | relative_url }}" alt="Souradeep" class="img-fluid">
+                            <p>Souradeep Dhar<br>Student Coordinator<br><a href="mailto:ms22256@iisermohali.ac.in">ms22256@iisermohali.ac.in</a></p>
+                        </div>
+                        <div class="team-member">
+                            <img src="{{ page.srinivas | relative_url }}" alt="Srinivas" class="img-fluid">
+                            <p>Srinivas Muddana<br>Student Coordinator<br><a href="mailto:ms22178@iisermohali.ac.in">ms22178@iisermohali.ac.in</a></p>
+                        </div>
+                        <div class="team-member">
+                            <img src="{{ page.anjana | relative_url }}" alt="Anjana" class="img-fluid">
+                            <p>Anjana AB<br>Student Coordinator<br><a href="mailto:ms21115@iisermohali.ac.in">ms21115@iisermohali.ac.in</a></p>
+                        </div>
+                        <div class="team-member">
+                            <img src="{{ page.aditya | relative_url }}" alt="Aditya" class="img-fluid">
+                            <p>Aditya Raj<br>Web Developer<br><a href="mailto:ms22130@iisermohali.ac.in">ms22130@iisermohali.ac.in</a></p>
+                        </div>
+                        <div class="team-member">
+                            <img src="{{ page.dhanish | relative_url }}" alt="Danish" class="img-fluid">
+                            <p>Danish Ahmed<br>Web Developer<br><a href="mailto:ms21218@iisermohali.ac.in">ms21218@iisermohali.ac.in</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Content -->
+                    <div class="contact-content mt-4">
+                        <p>For any inquiries, please email us at <a href="mailto:info@example.com">info@example.com</a></p>
+                        {% include call.html show_button=false %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

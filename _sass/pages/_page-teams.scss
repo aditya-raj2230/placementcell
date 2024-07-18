@@ -1,52 +1,84 @@
-.page-teams {
-  .team-summary {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    .team-image {
-      height: 60px;
-      width: 60px;
-      margin-right: 10px;
-      border-radius: 50%;
-      overflow: hidden;
-      img {
-        width: 60px;
-      }
-    }
-    .team-meta {
-      flex: 1;
-      h2 {
-        margin: 0;
-        font-size: 22px;
-        font-weight: normal;
-      }
-      p {
-        color: $black;
-        text-transform: uppercase;
-        margin: 0;
-        font-size: 12px;
-        font-weight: 500;
-      }
-    }
-    .team-content {
-      margin-top: 20px;
-      flex: 1 0 100%;
-    }
-  }
+/* Custom CSS to make content cover the whole screen and center it */
+.full-screen-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* 100% of the viewport height */
+  padding: 20px; /* Optional: add some padding */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  text-align: center;
+}
 
-  .team-summary-large {
-    background-color: $white-offset;
-    padding: 30px;
-    border-radius: 3px;
-    .team-image {
-      height: 90px;
-      width: 90px;
-      margin-right: 20px;
-      border-radius: 50%;
-      overflow: hidden;
-      img {
-        width: 90px;
-      }
-    }
-  }
+.full-screen-content h1, .full-screen-content h2, .full-screen-content h3, 
+.full-screen-content h4, .full-screen-content h5, .full-screen-content h6, 
+.full-screen-content p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.intro-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.page-recruiters .team-summary {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.page-recruiters .team-summary .team-image {
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.page-recruiters .team-summary .team-image img {
+  width: 60px;
+}
+
+.page-recruiters .team-summary .team-meta {
+  flex: 1;
+}
+
+.page-recruiters .team-summary .team-meta h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.page-recruiters .team-summary .team-meta p {
+  color: black; /* Assuming $black is black */
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.page-recruiters .team-summary .team-content {
+  margin-top: 20px;
+  flex: 1 0 100%;
+}
+
+.page-recruiters .team-summary-large {
+  background-color: #f8f9fa; /* Assuming $white-offset is a light grey */
+  padding: 30px;
+  border-radius: 3px;
+}
+
+.page-recruiters .team-summary-large .team-image {
+  height: 90px;
+  width: 90px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.page-recruiters .team-summary-large .team-image img {
+  width: 90px;
 }

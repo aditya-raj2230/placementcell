@@ -1,0 +1,246 @@
+---
+title: Recruiter
+layout: default
+bodyClass: "page-recruiters"
+---
+
+<style>
+    .container {}
+
+    .service-single {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Center the image and text */
+    }
+
+    .title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        text-align: justify;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-left: 2rem;
+        /* Added to create space between text and image */
+    }
+
+    .procedure-step {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        background-color: #f9f9f9;
+    }
+
+    .step-content {
+        display: flex;
+        align-items: flex-start;
+        /* Align text to top */
+        justify-content: space-between;
+    }
+
+    .step-content ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        /* Align text to left */
+    }
+
+    .step-content li {
+        margin-bottom: 0.5rem;
+    }
+
+    .step-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .step-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .image-container {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-left: 1rem;
+        /* Fixed dimension */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin-top: 4rem;
+        /* Removed padding to avoid overflow */
+    }
+
+    @media (max-width: 768px) {
+        .service-single {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .content {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+
+        .procedure-step {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .step-content {
+            flex-direction: column;
+        }
+
+        .image-container {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="service service-single">
+                <div class="image-container" style="width: 450px; height: 350px;">
+                    <img src="{{ page.campus_image | relative_url }}" alt="Campus View" class="img-fluid">
+                </div>
+                <div class="content mt-4">
+                    <h1 class="title">{{ page.title }}</h1>
+
+                    IISER Mohali is one of the top science and research institutes in India, and attracts the best minds
+                    across the country.
+                    The selection procedures for the various programmes on campus are rigorous, and includes clearing
+                    and securing ranks in
+                    highly competitive examinations including JEE, KVPY, GATE, JEST, and NET among others. Most
+                    undergraduate students are
+                    Government of India scholars, and are recipients of the INSPIRE and KVPY fellowships. Postgraduate
+                    and research students
+                    are also recipients of numerous prestigious fellowships including INSPIRE and JRF.
+
+                    To know more about the admission process and the programmes offered at IISER Mohali, please visit <a
+                        href="http://www.iisersystem.ac.in">The IISER System</a>.
+
+                    Envisioning a new generation of scientists and mathematicians, IISER Mohali aims to emerge as a
+                    global centre of
+                    learning, academic excellence, and innovative research. In this pursuit, the institute has always
+                    strived to make an
+                    impact across domains, and both academia and industry.
+
+                    Students and researchers are encouraged to work and collaborate on projects both within and outside
+                    the institute. As a
+                    result, they undertake summer/winter/semester-long internships every year in institutions around the
+                    globe, learning and
+                    developing their skills in intellectually stimulating environments.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-12">
+            <h2 class="text-center">Placement Procedure</h2>
+
+            <div class="procedure-step text-center">
+                <div class="step-icon">&#128100;</div>
+                <div class="step-title">1. Pre-Placement Engagement and Talks</div>
+                <div class="step-content">
+                    <div class="text-content">
+                        <ul>
+                            <li>Invitations and Pre-placement talks scheduled with companies between the months of
+                                July-November.</li>
+                            <li>Companies email us with their various interests and positions for our in-campus
+                                students.</li>
+                            <li>Companies share key aspects of their firm, work environment, and growth opportunities in
+                                the form of speech or PPT.</li>
+                            <li>Companies present their expectations from the Application Process and on what basis they
+                                will further shortlist.</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{ page.confrence | relative_url }}" alt="Pre-Placement Engagement">
+                    </div>
+                </div>
+            </div>
+
+            <div class="procedure-step text-center">
+                <div class="step-icon">&#128221;</div>
+                <div class="step-title">2. Application Process and Shortlists</div>
+                <div class="step-content">
+                    <div class="text-content">
+                        <ul>
+                            <li>Companies express interest via Job Notification Forms (JNF) including job descriptions
+                                and additional information.</li>
+                            <li>Students submit detailed resumes through the Placement Cell Committee which will be
+                                informed to them via emails.</li>
+                            <li>Students' resumes are made available to companies through an online portal.</li>
+                            <li>Companies scrutinize applications and send shortlists to the Placement Office by the
+                                months of November-January.</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{ page.application | relative_url }}" alt="Application Process">
+                    </div>
+                </div>
+            </div>
+
+            <div class="procedure-step text-center">
+                <div class="step-icon">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128103;</div>
+                <div class="step-title">3. Placement Interviews and Screening Tests</div>
+                <div class="step-content">
+                    <div class="text-content">
+                        <ul>
+                            <li>Verified CVs of students are accessible to companies in July and December.</li>
+                            <li>Screening tests (written or online) are conducted before interviews.</li>
+                            <li>Placement interviews start from November and may continue till February, with options
+                                for video conferencing if companies are unable to visit the campus.</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{ page.interview | relative_url }}" alt="Interviews and Screening Tests">
+                    </div>
+                </div>
+            </div>
+
+            <div class="procedure-step text-center">
+                <div class="step-icon">&#9989;</div>
+                <div class="step-title">4. Offers and Acceptance</div>
+                <div class="step-content">
+                    <div class="text-content">
+                        <ul>
+                            <li>Companies make offers including details of role, location, remuneration, and conditions.
+                            </li>
+                            <li>Offers are communicated via emails of the selected student candidates.</li>
+                            <li>Final offers sent to candidates within three weeks after the final interviews.</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{ page.job_offer | relative_url }}" alt="Offers and Acceptance">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

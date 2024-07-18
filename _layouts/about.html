@@ -1,0 +1,298 @@
+---
+title: About
+layout: default
+bodyClass: "page-about"
+intro_image_absolute: true
+intro_image_hide_on_mobile: false
+intro_image: images/campusview.jpg
+---
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding: 0;
+    }
+
+    .section {
+        padding: 2rem 2rem;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+    .section:last-child {
+        border-bottom: none;
+    }
+
+    .content {
+        padding: 0 2rem;
+    }
+
+    .section-image {
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    h1, h2, h3, h4 {
+        color: #0056b3;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        padding: 0.5rem 0;
+        position: relative;
+    }
+
+    ul li:before {
+        content: "";
+        position: absolute;
+        left: -1rem;
+    }
+
+    a {
+        color: #0056b3;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .intro-image {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .academics-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .academics-grid div {
+        background-color: #f1f1f1;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .full-width {
+        grid-column: span 2;
+        text-align: center;
+    }
+    .section2{
+        display: flex;
+        align-items: center;
+        padding: 2rem 2rem;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+    }
+</style>
+
+<div class="container-fluid">
+
+    <div class="section text-center">
+        
+        <div class="content">
+
+            <h1 class="title display-4">{{ page.title }}</h1>
+        </div>
+    </div>
+    <div class="section section2" id="about-iiser">
+        <img src="{{ page.deanacad | relative_url }}" alt="Abhishek" class="img-fluid section-image">
+        <div class="content">
+            <h1>About IISER Mohali</h1>
+            <p>Indian Institute of Science Education and Research (IISER) Mohali offers a range of programs designed to provide high-quality education and research opportunities in the field of science.</p>
+        </div>
+        
+    </div>
+
+    <div class="section" id="academics">
+        <div class="content">
+            <h2>Academics</h2>
+            <h3>Programs Offered</h3>
+            <div class="academics-grid">
+                <div>
+                    <h4>BS-MS Dual Degree Program</h4>
+                    <p>The BS-MS Dual Degree Program is a five-year program aimed at students who have completed their 10+2 with science subjects. It integrates classroom learning with research, fostering a comprehensive understanding of scientific concepts.</p>
+                    <ul>
+                        <li><strong>Objectives:</strong></li>
+                        <li>To provide a strong foundation in basic sciences.</li>
+                        <li>To encourage interdisciplinary learning.</li>
+                        <li>To promote research-oriented education.</li>
+                    </ul>
+                    <p><strong>Relevance:</strong> This program is designed to produce well-rounded scientists capable of independent research and critical thinking.</p>
+                </div>
+                <div>
+                    <h4>Integrated PhD Program</h4>
+                    <p>The Integrated PhD Program is designed for students who have completed their bachelor's degree and wish to pursue a research career. It combines a master's and PhD, offering a seamless transition from coursework to research.</p>
+                    <ul>
+                        <li><strong>Objectives:</strong></li>
+                        <li>To provide advanced knowledge in specific scientific fields.</li>
+                        <li>To develop research skills and methodologies.</li>
+                        <li>To contribute to scientific knowledge through original research.</li>
+                    </ul>
+                    <p><strong>Relevance:</strong> This program prepares students for careers in academia, industry, and research institutions.</p>
+                </div>
+                <div class="full-width">
+                    <h4>PhD Program</h4>
+                    <p>The PhD Program at IISER Mohali is for students who wish to pursue doctoral studies after completing their master's degree. It focuses on original research in various scientific disciplines.</p>
+                    <ul>
+                        <li><strong>Objectives:</strong></li>
+                        <li>To conduct high-quality research.</li>
+                        <li>To develop expertise in a specialized area of science.</li>
+                        <li>To contribute to scientific advancements through innovative research.</li>
+                    </ul>
+                    <p><strong>Relevance:</strong> This program is aimed at producing scientists who can lead independent research projects and contribute to the global scientific community.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section2 reverse" id="departments">
+        <div class="content">
+            <h3>Departments</h3>
+            <p>IISER Mohali has several departments that offer specialized courses and research opportunities:</p>
+            <ul>
+                <li>Department of Biological Sciences</li>
+                <li>Department of Chemical Sciences</li>
+                <li>Department of Physical Sciences</li>
+                <li>Department of Earth and Environmental Sciences</li>
+                <li>Department of Mathematical Sciences</li>
+                <li>Department of Humanities and Social Sciences</li>
+            </ul>
+        </div>
+        <img src="{{ page.department | relative_url }}" alt="Departments" class="section-image" />
+    </div>
+    
+    <div class="section section2" id="ranking">
+        <img src="{{ page.ranking | relative_url }}" alt="Research Facilities" class="section-image" />
+        <div class="content">
+            <h2>Ranking</h2>
+            <p>IISER Mohali is recognized as one of the top institutions for science education and research in India.</p>
+
+
+            <h3>National Rankings</h3>
+            <p>IISER Mohali consistently ranks among the top science institutes in the country.</p>
+            <ul>
+                <li><strong>NIRF Ranking</strong>Ranked among the top 20 institutions in the NIRF (National Institutional Ranking Framework) for science education and research.</li>
+            </ul>
+            <h3>International Recognition</h3>
+            <p>Our commitment to excellence in science education and research has earned us international recognition.</p>
+            <ul>
+                <li><strong>Times Higher Education</strong>Listed among the top institutions in the Times Higher Education rankings for our research impact and academic reputation.</li>
+                <li><strong>QS World University Rankings</strong> Featured in the QS World University Rankings for our outstanding academic programs and research contributions.</li>
+            </ul>
+            <h3>Achievements</h3>
+            <ul>
+                <li><strong>Research Publications</strong>High impact research publications in leading scientific journals.</li>
+                <li><strong>Awards and Honors</strong>Faculty and students have received numerous national and international awards.</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <div class="section section2" id="selection-process">
+       
+        <div class="content">
+            <h2>Selection Process</h2>
+            <p>The selection process at IISER Mohali is designed to identify and admit students with a strong aptitude for science.</p>
+
+
+            <h3>BS-MS Dual Degree Program</h3>
+            <p>IISER Mohali consistently ranks among the top science institutes in the country.</p>
+            <ul>
+                <li><strong>KVPY Channel</strong>Based on KVPY fellowship.</li>
+                <li><strong>JEE (Advanced) Channel</strong> Based on JEE (Advanced) rank.</li>
+                <li><strong>SCB Channel</strong>Based on IISER Aptitude Test.</li>
+            </ul>
+            <h3>PHD Program</h3>
+            <ul>
+                <li><strong>Written test and interview conducted by IISER Mohali.</strong></li>
+            </ul>
+            <h3>Integrated PHD Program</h3>
+            <ul>
+                <li><strong>Written test and interview conducted by IISER Mohali.</strong></li>
+            </ul>
+        </div>
+        <img src="{{ page.selection | relative_url }}" alt="Research Facilities" class="section-image" />
+    </div>
+
+
+
+    <div class="section section2" id="research-facilities">
+        <img src="{{ page.research | relative_url }}" alt="Research Facilities" class="section-image" />
+        <div class="content" id="research-and-development">
+            <h3>Research Facilities</h3>
+            <p>IISER Mohali is equipped with state-of-the-art research facilities that support cutting-edge research in various fields of science. These facilities include advanced laboratories, research centers, and access to national and international research networks.</p>
+        </div>
+       
+    </div>
+
+
+    <div class="section section2" id="alumni">
+        <div class="content">
+            <h2>Alumni</h2>
+            <p>The alumni of IISER Mohali are spread across the globe, making significant contributions in various fields of science, research, and industry.</p>
+
+
+            <h3>Alumni Network</h3>
+            <p>Our alumni network is robust and provides a platform for former students to connect, share experiences, and collaborate on research and projects.</p>
+            <ul>
+                <li><strong>Annual Alumni Meet:</strong> A yearly event to reconnect and celebrate the achievements of our alumni.</li>
+                <li><strong>Alumni Portal:</strong> An online platform to stay connected with fellow alumni and the institute.</li>
+            </ul>
+
+            
+
+            <p>For more information on our alumni network and events, please visit the <a href="https://web.iisermohali.ac.in">IISER Mohali Alumni Portal</a>.</p>
+        </div>
+        <div class="">
+            <h3>Our Alumni </h3>
+        <img src="{{ page.alumni_globe | relative_url }}" alt="Alumni" class="section-image" />
+    </div>
+    </div>
+
+
+
+    <div class="section section2 reverse" id="infrastructure-and-facilities">
+        <img src="{{ page.iisercampus | relative_url }}" alt="Infrastructure" class="section-image" />
+        <div class="content">
+            
+            <h2>Infrastructure and Facilities</h2>
+            <p>IISER Mohali boasts modern infrastructure and world-class facilities to support both academic and research activities.</p>
+
+            <h3>Key Facilities</h3>
+            <ul>
+                <li>Advanced Laboratories equipped with the latest technology.</li>
+                <li>Research Centers focusing on interdisciplinary research.</li>
+                <li>Library with extensive collections and digital resources.</li>
+                <li>Conference Halls for seminars, workshops, and academic events.</li>
+                <li>Sports Complex for physical activities and recreation.</li>
+            </ul>
+
+            <h3>Green Campus Initiative</h3>
+            <p>IISER Mohali is committed to sustainability and environmental conservation:</p>
+            <ul>
+                <li>Green Initiatives promoting energy efficiency and waste reduction.</li>
+                <li>Green Spaces for biodiversity and recreational purposes.</li>
+                <li>Community Outreach programs to raise awareness about environmental issues.</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+

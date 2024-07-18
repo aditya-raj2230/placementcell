@@ -1,14 +1,18 @@
-baseurl: '/'
+baseurl: '/web/oppcell/'
 permalink: pretty
 title: 'Jekyll Serif'
 
+port: 4000
+host: 127.0.0.1
+livereload: true
+
 logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
+  mobile: "images/logo/placementCelllogo.jpg"
+  mobile_height: "3rem"
+  mobile_width: "5rem"
+  desktop: "images/logo/mainlogo.png"
+  desktop_height: "80px"
+  desktop_width: "300px"
 
 home: 
   limit_services: 6
@@ -49,3 +53,6 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
+  
+markdown: kramdown
+

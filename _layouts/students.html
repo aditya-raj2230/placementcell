@@ -1,0 +1,204 @@
+---
+title: Students
+layout: default
+bodyClass: "page-student"
+intro_image: "images/illustrations/reading.svg"
+intro_image_absolute: true
+intro_image_hide_on_mobile: true
+report_image: "images/report.jpg"
+campus_view: "images/campusview.jpg"
+---
+
+<style>
+  .container-fluid {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .service {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+
+  .content {
+    font-size: 1rem;
+    color: #495057;
+  }
+
+  .content h2,
+  .content h4 {
+    font-weight: bold;
+    color: #343a40;
+  }
+
+  .content ul {
+    list-style: disc;
+    padding-left: 0;
+  }
+
+  .content ul li {
+    margin-bottom: 10px;
+  }
+
+  .content img {
+    margin: 20px 0;
+  }
+
+  .registration-links a {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .registration-links a:hover {
+    text-decoration: underline;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .eligibility {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<div class="container-fluid pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="service service-single text-center">
+        <h1 class="title">{{ page.title }}</h1>
+        <div class="content mt-4">
+          <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+              <h2>Campus Placement Facility</h2>
+              <p>The Opportunity Cell offers campus placement facility for students who are looking to transition into
+                industry roles after graduating from their respective programme at IISER Mohali. Interested students are
+                required to register with the Opportunity Cell for Campus Placement.</p>
+              <p>Please read the Rules & Regulations of the placement process before registering.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="{{ page.campus_placement | relative_url }}" alt="Campus View" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="row align-items-center mt-5">
+            <h2>Placement Report of Last Year</h2>
+            <img src="{{ page.report_image | relative_url }}" alt="Placement Report" class="img-fluid">
+          </div>
+
+          <div class="row align-items-center mt-5 ">
+            <h2>Rules and Regulations</h2>
+            <h4 class="eligibility">1. Eligibility and Registration</h4>
+            <div class="col-md-6">
+              <ul>
+                <li>Only students expecting to graduate from IISER Mohali by the end of the academic year 2020-21
+                  through the BS-MS/PhD/Int-PhD/Post-doc programs and are seeking employment may register for campus
+                  placements with the Opportunity Cell.</li>
+                <li>Placements will happen round the year, and registered students will be notified through IISER Mohali
+                  webmail whenever companies list opportunities through the Opportunity Cell.</li>
+                <li>Campus placement is a facility provided for the students by the Opportunity Cell, IISER Mohali. It
+                  is <strong>not mandatory</strong> for all students to register for campus placement. Students not
+                  interested in placement and/or looking to pursue a further-study programme on graduation are advised
+                  not to register for campus placement.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Students having 2 or more uncleared ‘F’ grades are not permitted to register for placement.</li>
+                <li>In addition to the aforementioned rules, a company may have its own eligibility criteria (CPI, major
+                  branch, minor, etc.), and only registered students satisfying all criteria will be allowed to apply
+                  for the role offered by the company.</li>
+                <li>If any registered student is found contacting the recruiting company at his own discretion, he/she
+                  will be debarred from the campus placement process.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="row align-items-center mt-5">
+            <div class="col-md-6 order-md-2">
+              <h4>2. Resume</h4>
+              <ul>
+                <li>All registered students are expected to follow the institute resume template sent to their webmail
+                  while registering.</li>
+                <li>Registered students satisfying the eligibility criteria for a role offered by a company, if
+                  interested in the role, are supposed to upload their resume while applying for the role online before
+                  the deadline.</li>
+                <li>If any registered student is found to have fabricated any of the details mentioned on his/her
+                  resume, he/she will be debarred from the campus placement process.</li>
+              </ul>
+            </div>
+            <div class="col-md-6 order-md-1">
+              <img src="{{ page.resume | relative_url }}" alt="Campus View" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+              <h4>3. Placement Process</h4>
+              <ul>
+                <li>All registered students applying for a role will be notified if they have been shortlisted via
+                  webmail.</li>
+                <li>A shortlisted student is expected to check for any announcements/notifications from the Opportunity
+                  Cell.</li>
+                <li>A student who applies and gets shortlisted is bound to go through the entire selection process
+                  unless rejected midway by the company. Any student who withdraws deliberately in the middle of the
+                  process will be debarred from the campus placement process.</li>
+                <li>A shortlisted student is expected to be on time for the selection test/interview/group discussion.
+                  If the student is late, he/she may not be allowed to appear for the selection process of the company.
+                </li>
+                <li>Registered students must have their identity card with them throughout the placement process.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <img src="{{ page.interview | relative_url }}" alt="Campus View" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="row align-items-center mt-5">
+            <div class="col-md-6 order-md-2">
+              <h4>4. Job Offers</h4>
+              <ul>
+                <li>If any student has accepted a campus placement job with an offer of CTC 5.5 lakhs or more, the
+                  student will be automatically de-registered from the campus placement process.</li>
+                <li>Each registered student is eligible for only one job offer.</li>
+                <li>If a student receives more than one offer, and if there is a delay in the announcement of results by
+                  some companies, the student is bound to accept/reject the job offer of the company whose results are
+                  declared in time.</li>
+                <li>Students are required to communicate the acceptance/rejection of the offer within 24 hours on the
+                  day following the release of the offer.</li>
+              </ul>
+            </div>
+            <div class="col-md-6 order-md-1">
+              <img src="{{ page.job_offer | relative_url }}" alt="Campus View" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="row align-items-center mt-5">
+
+
+            <h5>
+              For all matters not covered by the above rules and regulations, the Placement Cell will take
+              appropriate decisions at its discretion. The decision taken by the Placement Cell shall be binding
+              on all students.
+            </h5>
+
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
