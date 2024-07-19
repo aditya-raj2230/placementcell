@@ -7,9 +7,9 @@ host: 127.0.0.1
 livereload: true
 
 logo:
-  mobile: "images/logo/placementCelllogo.jpg"
-  mobile_height: "3rem"
-  mobile_width: "5rem"
+  mobile: "images/logo/mainlogo.png"
+  mobile_height: "80px"
+  mobile_width: "300px"
   desktop: "images/logo/mainlogo.png"
   desktop_height: "80px"
   desktop_width: "300px"

@@ -34,8 +34,14 @@ intro_image: images/campusview.jpg
     }
 
     .section-image {
-        width: 400px;
-        height: 300px;
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .map{
+        width: 100%;
+        height: auto;
         border-radius: 10px;
         object-fit: cover;
     }
@@ -88,25 +94,67 @@ intro_image: images/campusview.jpg
         border-radius: 10px;
     }
 
+    .desktop{
+        display: none;
+    }
     .full-width {
         grid-column: span 2;
         text-align: center;
     }
-    .section2{
+
+    .section2 {
         display: flex;
         align-items: center;
         padding: 2rem 2rem;
         border-bottom: 1px solid #ddd;
         background-color: #fff;
     }
+
+    .section2.reverse {
+        flex-direction: row-reverse;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .content {
+            padding: 0 1rem;
+        }
+
+        .section {
+            padding: 1rem 1rem;
+        }
+
+        .section2 {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .section2.reverse {
+            flex-direction: column;
+        }
+
+        .section-image {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .rank{
+            display: none;
+        }
+        
+
+        .academics-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .full-width {
+            grid-column: span 1;
+        }
+    }
 </style>
 
 <div class="container-fluid">
-
     <div class="section text-center">
-        
         <div class="content">
-
             <h1 class="title display-4">{{ page.title }}</h1>
         </div>
     </div>
@@ -116,7 +164,6 @@ intro_image: images/campusview.jpg
             <h1>About IISER Mohali</h1>
             <p>Indian Institute of Science Education and Research (IISER) Mohali offers a range of programs designed to provide high-quality education and research opportunities in the field of science.</p>
         </div>
-        
     </div>
 
     <div class="section" id="academics">
@@ -176,47 +223,43 @@ intro_image: images/campusview.jpg
         </div>
         <img src="{{ page.department | relative_url }}" alt="Departments" class="section-image" />
     </div>
-    
+
     <div class="section section2" id="ranking">
-        <img src="{{ page.ranking | relative_url }}" alt="Research Facilities" class="section-image" />
+        <img src="{{ page.ranking | relative_url }}" alt="Research Facilities" class="section-image rank" />
         <div class="content">
             <h2>Ranking</h2>
             <p>IISER Mohali is recognized as one of the top institutions for science education and research in India.</p>
 
-
             <h3>National Rankings</h3>
             <p>IISER Mohali consistently ranks among the top science institutes in the country.</p>
             <ul>
-                <li><strong>NIRF Ranking</strong>Ranked among the top 20 institutions in the NIRF (National Institutional Ranking Framework) for science education and research.</li>
+                <li><strong>NIRF Ranking:</strong> Ranked among the top 20 institutions in the NIRF (National Institutional Ranking Framework) for science education and research.</li>
             </ul>
             <h3>International Recognition</h3>
             <p>Our commitment to excellence in science education and research has earned us international recognition.</p>
             <ul>
-                <li><strong>Times Higher Education</strong>Listed among the top institutions in the Times Higher Education rankings for our research impact and academic reputation.</li>
-                <li><strong>QS World University Rankings</strong> Featured in the QS World University Rankings for our outstanding academic programs and research contributions.</li>
+                <li><strong>Times Higher Education:</strong> Listed among the top institutions in the Times Higher Education rankings for our research impact and academic reputation.</li>
+                <li><strong>QS World University Rankings:</strong> Featured in the QS World University Rankings for our outstanding academic programs and research contributions.</li>
             </ul>
             <h3>Achievements</h3>
             <ul>
-                <li><strong>Research Publications</strong>High impact research publications in leading scientific journals.</li>
-                <li><strong>Awards and Honors</strong>Faculty and students have received numerous national and international awards.</li>
+                <li><strong>Research Publications:</strong> High impact research publications in leading scientific journals.</li>
+                <li><strong>Awards and Honors:</strong> Faculty and students have received numerous national and international awards.</li>
             </ul>
         </div>
-        
     </div>
 
     <div class="section section2" id="selection-process">
-       
         <div class="content">
             <h2>Selection Process</h2>
             <p>The selection process at IISER Mohali is designed to identify and admit students with a strong aptitude for science.</p>
 
-
             <h3>BS-MS Dual Degree Program</h3>
             <p>IISER Mohali consistently ranks among the top science institutes in the country.</p>
             <ul>
-                <li><strong>KVPY Channel</strong>Based on KVPY fellowship.</li>
-                <li><strong>JEE (Advanced) Channel</strong> Based on JEE (Advanced) rank.</li>
-                <li><strong>SCB Channel</strong>Based on IISER Aptitude Test.</li>
+                <li><strong>KVPY Channel:</strong> Based on KVPY fellowship.</li>
+                <li><strong>JEE (Advanced) Channel:</strong> Based on JEE (Advanced) rank.</li>
+                <li><strong>SCB Channel:</strong> Based on IISER Aptitude Test.</li>
             </ul>
             <h3>PHD Program</h3>
             <ul>
@@ -227,26 +270,22 @@ intro_image: images/campusview.jpg
                 <li><strong>Written test and interview conducted by IISER Mohali.</strong></li>
             </ul>
         </div>
-        <img src="{{ page.selection | relative_url }}" alt="Research Facilities" class="section-image" />
+        <img src="{{ page.selection | relative_url }}" alt="Research Facilities" class="section-image rank" />
     </div>
 
-
-
     <div class="section section2" id="research-facilities">
-        <img src="{{ page.research | relative_url }}" alt="Research Facilities" class="section-image" />
+        <img src="{{ page.research | relative_url }}" alt="Research Facilities" class="section-image rank" />
         <div class="content" id="research-and-development">
             <h3>Research Facilities</h3>
             <p>IISER Mohali is equipped with state-of-the-art research facilities that support cutting-edge research in various fields of science. These facilities include advanced laboratories, research centers, and access to national and international research networks.</p>
         </div>
-       
+        <img src="{{ page.research2 | relative_url }}" alt="Research Facilities" class="section-image" />
     </div>
-
 
     <div class="section section2" id="alumni">
         <div class="content">
             <h2>Alumni</h2>
             <p>The alumni of IISER Mohali are spread across the globe, making significant contributions in various fields of science, research, and industry.</p>
-
 
             <h3>Alumni Network</h3>
             <p>Our alumni network is robust and provides a platform for former students to connect, share experiences, and collaborate on research and projects.</p>
@@ -255,22 +294,17 @@ intro_image: images/campusview.jpg
                 <li><strong>Alumni Portal:</strong> An online platform to stay connected with fellow alumni and the institute.</li>
             </ul>
 
-            
-
             <p>For more information on our alumni network and events, please visit the <a href="https://web.iisermohali.ac.in">IISER Mohali Alumni Portal</a>.</p>
         </div>
         <div class="">
-            <h3>Our Alumni </h3>
-        <img src="{{ page.alumni_globe | relative_url }}" alt="Alumni" class="section-image" />
+            <h3>Our Alumni</h3>
+            <img src="{{ page.alumni_globe | relative_url }}" alt="Alumni" class="section-image map" />
+        </div>
     </div>
-    </div>
-
-
 
     <div class="section section2 reverse" id="infrastructure-and-facilities">
-        <img src="{{ page.iisercampus | relative_url }}" alt="Infrastructure" class="section-image" />
+        <img src="{{ page.iisercampus | relative_url }}" alt="Infrastructure" class="section-image rank" />
         <div class="content">
-            
             <h2>Infrastructure and Facilities</h2>
             <p>IISER Mohali boasts modern infrastructure and world-class facilities to support both academic and research activities.</p>
 
@@ -292,7 +326,4 @@ intro_image: images/campusview.jpg
             </ul>
         </div>
     </div>
-
-
 </div>
-

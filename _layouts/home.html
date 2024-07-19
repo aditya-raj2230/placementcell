@@ -9,12 +9,14 @@ bodyClass: "page-home"
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         {{ content }}
         {% if page.show_call_box %}
-          {% include call.html show_button=true %}
+        {% include call.html show_button=true %}
         {% endif %}
       </div>
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
+        <img alt="{{ page.title }}"
+          class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}"
+          src="{{ page.intro_image | relURL }}" />
       </div>
       {% endif %}
     </div>
@@ -23,22 +25,111 @@ bodyClass: "page-home"
 
 <div class="strip" style="margin-top: 10px;">
   <div class="container pt-6 pb-6 pb-md-10">
-    <p style="margin-left: 200px; font-size: 3rem; margin-bottom: 50px;">Why Recruit From IISER Mohali</p>
+    <p class="strip-title">Why Recruit From IISER Mohali</p>
     <div class="row justify-content-start">
-      {% assign limit = site.home.limit_services | default: 6 %}
-      {% for service in site.services limit: limit %}
+     
       <div class="col-12 col-md-4 mb-1">
         <div class="service service-summary">
           <div class="service-content">
-            <img src="{{ service.image.url }}" alt="{{ service.title }}" width="{{ service.image.width }}" height="{{ service.image.height }}">
+            <img src="{{ page.image.url1 }}" alt="academics" width="{{ page.image.width }}"
+              height="{{ page.image.height }}">
             <h2 class="service-title">
-              <a href="{{ '/about' | relative_url }}#{{ service.title | replace: ' ', '-' | downcase }}">{{ service.title }}</a>
+              <a href="{{ '/about' | relative_url }}#academics"> Academics </a>
             </h2>
-            <p>{{ service.excerpt | markdownify | strip_html | truncate: 100 }}</p>
+            <p>Indian Institute of Science Education and Research (IISER) Mohali offers a range of programs designed to
+              provide high-quality education and research opportunities in the field of science.</p>
           </div>
         </div>
       </div>
-      {% endfor %}
+      <div class="col-12 col-md-4 mb-1">
+        <div class="service service-summary">
+          <div class="service-content">
+            <img src="{{ page.image.url2 }}" alt="alumni" width="{{ page.image.width }}"
+              height="{{ page.image.height }}">
+            <h2 class="service-title">
+              <a href="{{ '/about' | relative_url }}#alumni"> Alumni </a>
+            </h2>
+            <p>The alumni of IISER Mohali are spread across the globe, making significant contributions in various fields of science, research, and industry.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-1">
+        <div class="service service-summary">
+          <div class="service-content">
+            <img src="{{ page.image.url3 }}" alt="research" width="{{ page.image.width }}"
+              height="{{ page.image.height }}">
+            <h2 class="service-title">
+              <a href="{{ '/about' | relative_url }}#research-and-development"> Research and Development </a>
+            </h2>
+            <p>IISER Mohali is at the forefront of research and development in various scientific disciplines.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-1">
+        <div class="service service-summary">
+          <div class="service-content">
+            <img src="{{ page.image.url4 }}" alt="selection-process" width="{{ page.image.width }}"
+              height="{{ page.image.height }}">
+            <h2 class="service-title">
+              <a href="{{ '/about' | relative_url }}#selection-process"> Selection Process </a>
+            </h2>
+            <p>The selection process at IISER Mohali is designed to identify and admit students with a strong aptitude for science.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-1">
+        <div class="service service-summary">
+          <div class="service-content">
+            <img src="{{ page.image.url5 }}" alt="ranking" width="{{ page.image.width }}"
+              height="{{ page.image.height }}">
+            <h2 class="service-title">
+              <a href="{{ '/about' | relative_url }}#ranking"> Ranking </a>
+            </h2>
+            <p>IISER Mohali is recognized as one of the top institutions for science education and research in India.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-1">
+        <div class="service service-summary">
+          <div class="service-content">
+            <img src="{{ page.image.url6 }}" alt="infra" width="{{ page.image.width }}"
+              height="{{ page.image.height }}">
+            <h2 class="service-title">
+              <a href="{{ '/about' | relative_url }}#infrastructure-and-facilities"> Infrastructure and Facilities </a>
+            </h2>
+            <p>IISER Mohali boasts state-of-the-art infrastructure to support academic excellence and research.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+  .strip-title {
+    margin-left: 200px;
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 768px) {
+    .strip-title {
+      margin-left: 0;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .service-content img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .service-title {
+      text-align: center;
+    }
+
+    .service-summary {
+      text-align: center;
+    }
+  }
+</style>
